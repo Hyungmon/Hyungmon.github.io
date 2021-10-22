@@ -26,7 +26,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" style="background-color: #202a37;">
     <div class="container">
-      <a class="navbar-brand" href="#">Rangga Raditya</a>
+      <a class="navbar-brand" href="#">Portfolio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -114,7 +114,8 @@
               <p class="card-text">
                 Aplikasi Pembayaran SPP menggunakan Laravel 7 dan Bootstrap 4
               </p>
-              <a href="https://github.com/Hyungmon/Pembayaran-SPP" target="_blank" class="btn btn-primary">Click Me!</a>
+              <a href="https://github.com/Oecophyllaa/Pembayaran-SPP" target="_blank" class="btn btn-primary">Click
+                Me!</a>
             </div>
           </div>
         </div>
@@ -126,7 +127,7 @@
               <p class="card-text">
                 Membuat game sederhana menggunakan HTML5 Canvas dan Javascript
               </p>
-              <a href="https://hyungmon.github.io/Spaceshooter/" target="_blank" class="btn btn-primary">Click
+              <a href="https://oecophyllaa.github.io/Spaceshooter/" target="_blank" class="btn btn-primary">Click
                 Me!</a>
             </div>
           </div>
@@ -293,7 +294,7 @@
           <ul class="list-unstyled">
             <li class="ms-3 mb-2">
               <i class="bi bi-github"></i>
-              <a href="https://github.com/Hyungmon" class="text-white fw-bold text-decoration-none" target="_blank">
+              <a href="https://github.com/Oecophyllaa" class="text-white fw-bold text-decoration-none" target="_blank">
                 Github
               </a>
             </li>
@@ -347,67 +348,12 @@
   <!-- GSAP Js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
-  <script>
-    gsap.registerPlugin(TextPlugin)
-    gsap.to('.lead', {
-      duration: 2,
-      delay: 1.5,
-      text: 'Polytechnic Student'
-    })
-    // gsap.from('.jumbotron img', {
-    //   duration: 1,
-    //   rotateY: 360,
-    //   opacity: 0,
-    // })
-    gsap.from('.navbar', {
-      duration: 1.5,
-      y: '-100%',
-      opacity: 0,
-      ease: 'bounce'
-    })
-    gsap.from('.display-4', {
-      duration: 1,
-      x: -50,
-      opacity: 0,
-      delay: 0.5,
-      ease: 'back'
-    })
-  </script>
+
+  <!-- Gsap Js -->
+  <script></script>
 
   <!-- Contact Form Js -->
-  <script>
-    const scriptURL =
-      'https://script.google.com/macros/s/AKfycbw12CA-DsCvuyVlLPlNZizHfax065EUV_cJKN40sCllLCcVQKXxI2q8rbat5yslIskiKg/exec'
-    const form = document.forms['github-contact-form']
-    const btnKirim = document.querySelector('.btn-kirim')
-    const btnLoading = document.querySelector('.btn-loading')
-    const formAlert = document.querySelector('.form-alert')
-
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      // ketika tombol submit diklik
-      // tampilkan tombol loading, hilangkan tombol kirim
-      btnLoading.classList.toggle('d-none')
-      btnKirim.classList.toggle('d-none')
-
-      fetch(scriptURL, {
-          method: 'POST',
-          body: new FormData(form)
-        })
-        .then(response => {
-          // tampilkan tombol kirim, hilangkan tombol loading
-          btnLoading.classList.toggle('d-none')
-          btnKirim.classList.toggle('d-none')
-          // tampilkan alert
-          formAlert.classList.toggle('d-none')
-          // reset form
-          form.reset()
-
-          console.log('Success!', response)
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
